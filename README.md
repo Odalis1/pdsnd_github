@@ -1,15 +1,16 @@
 ### Date created
-Include the date you created this project and README file.
+10/22/2018
 
-### Project Title
-Replace the Project Title
+### Bikeshare Data Analysis Project
 
 ### Description
-Describe what your project is about and what it does
+In this project, I used python to build an application that let's you select a city, month, and day of the week to review a data analysis of the city. For example, you can see the most popular bike route, the average travel time, and the most popular travel time.
 
 ### Files used
-Include the files used
+bikeshare.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Thanks to Motivate for providing the data used for the analysis. https://www.motivateco.com/
