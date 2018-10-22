@@ -11,6 +11,7 @@ bikeshare.py
 chicago.csv
 new_york_city.csv
 washington.csv
+.gitignore
 
 ### Credits
-Thanks to Motivate for providing the data used for the analysis. https://www.motivateco.com/
+Thanks to Motivate for providing the data used for the analysis: https://www.motivateco.com/.
