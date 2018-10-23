@@ -117,7 +117,6 @@ def time_stats(df):
     popular_hour = df['hour'].mode()[0]
    
     print('\nCalculating The Most Frequent Times of Travel...\n')
-    start_time = time.time()
 
     # display the most common month
     print('Most Popular Month:', calendar.month_name[popular_month])
@@ -128,7 +127,6 @@ def time_stats(df):
     # display the most common start hour
     print('Most Popular Start Hour:', popular_hour)
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -136,7 +134,6 @@ def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
-    start_time = time.time()
 
     # find the most commonly used start station
     popular_start = df['Start Station'].mode()[0]
@@ -156,7 +153,6 @@ def station_stats(df):
     # display most frequent combination of start station and end station trip
     print('Most Popular Route:', popular_route)
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -164,7 +160,6 @@ def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
     print('\nCalculating Trip Duration...\n')
-    start_time = time.time()
 
     # convert the Trip Duration column to numeric
     df['Trip Duration'] = pd.to_numeric(df['Trip Duration'])
@@ -181,7 +176,6 @@ def trip_duration_stats(df):
     # display mean travel time
     print('Average Travel Time', round((avg_travel/60),2), ' mins')
     
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -189,7 +183,6 @@ def user_stats(df):
     """Displays statistics on bikeshare users."""
 
     print('\nCalculating User Stats...\n')
-    start_time = time.time()
 
     # find counts of user types
     user_types = df['User Type'].value_counts()
@@ -235,7 +228,6 @@ def user_stats(df):
             print('Birth year data isn\'t available for Washington.')
             break
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
     
