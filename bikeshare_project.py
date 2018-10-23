@@ -35,7 +35,7 @@ def get_filters():
 
     while True: 
         try:
-            month = str(input("Enter the name of the month that you'd like to explore: January - June. Use 'all' to see the data for all months. ")).strip().lower()
+            month = str(input('Enter the name of the month that you\'d like to explore: January - June. Use "all" to see the data for all months. ')).strip().lower()
             while month not in ["january","february","march","april","may","june","all"]:
                 print('\nOops, that doesn\'t look like the name of a month from January - June.')
                 month = str(input('Try entering a month like January, February, etc. Or use "all" for all months.\n')).strip().lower()
@@ -44,20 +44,20 @@ def get_filters():
                 break
         except (ValueError, KeyError):
                 print('\nOops, that doesn\'t look like the name of a month.')
-                print('Check your spelling and be sure you\'re entering a month like January, February, etc. Or use "all" for all months.\n')
+                print('Check your spelling and make sure that you\'re entering a month like January, February, etc. Or use "all" for all months.\n')
             
     while True: 
         try:
-            day = str(input("Enter the day of the week that you'd like to explore: Monday - Sunday. Use 'all' to see the data for all days. ")).strip().lower()
+            day = str(input('Enter the day of the week that you\'d like to explore: Monday - Sunday. Use "all" to see the data for all days. ')).strip().lower()
             while day not in ["monday","tuesday","wednesday","thursday","friday","saturday","sunday","all"]:
                 print('\nOops, that doesn\'t look like the name of a day of the week.')
-                day = str(input('Check your spelling and be sure you\'re entering a day like Monday, Wednesday, Friday, etc. Or use "all" for all days.\n')).strip().lower()
+                day = str(input('Check your spelling and make sure that you\'re entering a day like Monday, Wednesday, Friday, etc. Or use "all" for all days.\n')).strip().lower()
             else:
                 print('\n')
                 break
         except (ValueError, KeyError):
             print('\nOops, that doesn\'t look like the name of a day of the week.')
-            print('Check your spelling and be sure you\'re entering a day like Monday, Wednesday, Friday, etc. Or use "all" for all days.\n')
+            print('Check your spelling and make sure that you\'re entering a day like Monday, Wednesday, Friday, etc. Or use "all" for all days.\n')
 
     return city, month, day
 
