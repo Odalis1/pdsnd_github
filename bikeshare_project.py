@@ -9,7 +9,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 
 def get_filters():
     """
-    Asks user to specify a city, month, and day to analyze.
+    Asks user to specify a city, month, and day to analyze. Handles errors.
 
     Returns:
         (str) city - name of the city to analyze
@@ -212,10 +212,10 @@ def user_stats(df):
         except KeyError:
             break
 
-    # display counts of user types
+    # display counts of each user type
     print('Number of Each User Type:', user_types, '\n')
 
-    # display counts of gender
+    # display counts of each gender
     while True:
         try:
             print('Number of Each Gender Type:', gender, '\n')
@@ -240,12 +240,12 @@ def user_stats(df):
 
     
 def raw_data(city):
-    """ Display raw data upon request """
+    """ Displays raw data upon request """
     
     # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
     
-    # count use to show further raw data
+    # count used to show more rows of raw data
     count = 0
 
     # ask user if they'd like to see the raw data and display 5 rows of data each time they respond "yes"
