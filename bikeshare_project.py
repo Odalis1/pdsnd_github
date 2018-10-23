@@ -229,10 +229,10 @@ def user_stats(df):
         try:
             print('Oldest User Born:', int(oldest))
             print('Youngest User Born:', int(youngest))
-            print('Most Common Birth Year:', int(common))
+            print('Most Common Birth Year:', int(common), '\n')
             break
         except UnboundLocalError:
-            print('Birth year data isn\'t available for Washington.')
+            print('Birth year data isn\'t available for Washington.\n')
             break
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -252,13 +252,11 @@ def raw_data(city):
     while True:
         show_data = str(input('\nWould you like to see the raw data? Enter yes or no.\n')).strip().lower()
         if show_data == "yes" and count == 0:
-            print("first round!")
             print(df.loc[0:4])
             count = 1
             start = 5
             end = 9
         elif show_data == "yes" and count > 0:
-            print("next round!")
             print(df.loc[start:end])
             start = end + 1
             end = start + 4
