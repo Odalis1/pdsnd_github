@@ -17,7 +17,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('\n')
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('Hey there! Let\'s explore some US bikeshare data!')
     
     #Capture inputs for city, month, and day. Also, use try-except block to handle errors
     while True: 
